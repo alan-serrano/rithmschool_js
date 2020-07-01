@@ -5,7 +5,10 @@ joined together.
 */
 
 function capitalSentence(str) {
+    const expression = /[A-Z]/g;
+    const matches = str.match(expression);
 
+    return (matches) ? matches.join('') : '';
 }
 
 function test() {
