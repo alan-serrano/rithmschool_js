@@ -3,7 +3,9 @@ Write a function called countNumbers which accepts a string of numbers and retur
 */
 
 function countNumbers(str) {
-    
+    const expression = /[0-9]/g;
+    const matches = str.match(expression);
+    return (matches) ? matches.length : 0;
 }
 
 function test() {
