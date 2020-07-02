@@ -7,7 +7,9 @@ the function should return true. Otherwise, return false
 */
 
 function isValidPassword(str) {
-
+    const expression1 = /.{8,}/; // Longer than 7 characters
+    const expression2 = /[!@#$]+/; // Includes at least one of those charecters
+    return expression1.test(str) && expression2.test(str);
 }
 
 function test() {
@@ -20,3 +22,5 @@ function test() {
 
     console.table(results);
 }
+
+test();
